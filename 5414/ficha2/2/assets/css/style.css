@@ -1,13 +1,33 @@
 table{
     border: 1px solid;
+    text-align: center; 
+    width: 100%;
 }
-.border1{
+th{
+    width:12.50%;
+}
+th:empty{
     border: 1px solid;
+    background-color: gray; 
 }
-.border3{
-    border: 3px solid;
+
+td:empty::before{
+    content: "--";
 }
 td:empty{
     border: 3px solid;
-    background-color: gray;
+    background-color: rgb(199, 197, 197);
+}
+
+.dia{
+    color: white;
+    background-color: green;
+}
+.nome{
+    color: white;
+    background-color: rgb(154, 194, 255);
+    }
+.horario{
+        color: white;
+        background-color: blue;
 }
