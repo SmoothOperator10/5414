@@ -1,20 +1,14 @@
 .center{
     text-align: center;
 }
-.tophead{
+caption{
     background-color: red;
     color: white;
-    border-bottom: 2px solid;
-    border-color: black;
 }
 .meses{
     font-family: Arial, Helvetica, sans-serif;
     color: #24589c;
 }
-table{
-    border: 1px solid;
-}
-th, td{
-    border: 1px solid; 
-    border-color: black;
+table, th, td, caption{
+    border: 1px solid black;
 }
