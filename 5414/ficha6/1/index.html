@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="assets/js/functions.js"></script>
+</head>
+
+<body>
+    <label>Introduza o nome da equipa:</label><br>
+    <input type="text" id="nomeEquipa"><br>
+    <label>Introduza o número de vitórias:</label><br>
+    <input type="number" id="vitoriasEquipa"><br>
+    <label>Introduza o número de derrotas:</label><br>
+    <input type="number" id="derrotasEquipa"><br>
+
+    <button type="button" onclick="registaEquipa()">Registar</button>
+    <button type="button" onclick="mostrarEquipa()">Mostrar</button>
+    <br><br>
+    <table>
+        <thead>
+            <tr>
+                <th>Equipa</th>
+                <th>Vitórias</th>
+                <th>Derrotas</th>
+                <th>% de Vitórias</th>
+            </tr>
+        </thead>
+        <tbody id="listagemEquipas">
+
+        </tbody>
+    </table>
+</body>
+
+<label>Equipa a atualizar:</label><br>
+<select id="listaEquipas" onchange="getInfoEquipas(this.value)">
+    <option value="-1">Sem equipas registadas</option>
+  </select><br>
+  <label>Equipa:</label>
+  <input type="text" id="nomeEquipaEdit"><br>
+  <label>Vitórias:</label>
+  <input type="number" id="vitoriasEquipaEdit"><br>
+  <label>Derrotas:</label>
+  <input type="number" id="derrotasEquipaEdit"><br>
+
+  <button type="button" onclick="editEquipa()">Guardar</button>
+</html>

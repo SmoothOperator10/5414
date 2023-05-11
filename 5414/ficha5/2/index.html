@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="assets/js/functions.js"></script>
+</head>
+
+<body>
+    <label>Introduza a Marca:</label><br>
+    <select id="marca">
+        <option value="Mercedes">Mercedes</option>
+        <option value="BMW">BMW</option>
+        <option value="Renault">Renault</option>
+        <option value="Audi">Audi</option>
+        <option value="VW">VW</option>
+        <option value="Fiat">Fiat</option>
+        <option value="Peugeot">Peugeot</option>
+        <option value="Opel">Opel</option>
+      </select><br>
+    <label>Introduza a Modelo:</label><br>
+    <input type="text" id="modelo"><br>
+    <label>Introduza a Matrícula:</label><br>
+    <input type="text" id="matricula"><br>
+    <label>Introduza o Consumo de combustível:</label><br>
+    <input type="number" id="consumo"><br>
+    <label>Introduza o Kms:</label><br>
+    <input type="number" id="kms"><br>
+
+    <button type="button" onclick="registaVeiculo()">Registar</button>
+    <button type="button" onclick="mostrarVeiculo()">Mostrar</button>
+    <br><br>
+    <table>
+        <thead>
+            <tr>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Matrícula</th>
+                <th>Consumo</th>
+                <th>Kms</th>
+            </tr>
+        </thead>
+        <tbody id="listagemVeiculos">
+
+        </tbody>
+    </table>
+</body>
+<p>Total de Kms:</p>
+<p id="totalKms"></p>
+<p>Consumo médio:</p>
+<p id="consmedio"></p>
+
+</html>

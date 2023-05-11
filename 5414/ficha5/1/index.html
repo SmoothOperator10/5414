@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="assets/js/functions.js"></script>
+</head>
+
+<body>
+    <label>Introduza a ID:</label><br>
+    <input type="number" id="id"><br>
+    <label>Introduza a Nome:</label><br>
+    <input type="text" id="nome"><br>
+    <label>Introduza os descrição:</label><br>
+    <input type="text" id="descricao"><br>
+    <label>Introduza os Preço s/ IVA:</label><br>
+    <input type="number" id="preco"><br>
+
+    <button type="button" onclick="registaProduto()">Registar</button>
+    <button type="button" onclick="mostrarProduto()">Mostrar</button>
+    <br><br>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Preço S/ IVA</th>
+                <th>Preço C/ IVA</th>
+            </tr>
+        </thead>
+        <tbody id="listagemProdutos">
+
+        </tbody>
+    </table>
+</body>
+
+</html>
