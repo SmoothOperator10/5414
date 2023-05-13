@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/function.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <label>NIF</label><br>
+    <input type="number" id="nifParticipante"> <br>   
+    <label>Nome</label><br>
+    <input type="text" id="nomeParticipante">  <br>
+    <label>Morada</label><br>
+    <input type="text" id="moradaParticipante"> <br> 
+    <label>Idade</label><br>
+    <input type="number" id="idadeParticipante"> <br> 
+    <label>Telefone</label><br>
+    <input type="tel" id="telefoneParticipante">  <br>
+    <label>Curso</label><br>
+    <select id="cursoParticipante">
+        <option value="html">HTML</option>
+        <option value="java">Java</option>
+        <option value="csharp">C#</option>
+        <option value="php">PHP</option>
+    </select><br><br>
+    <button type="button" onclick="registarParticipantes()">Registar</button>
+    <button type="button" onclick="listarParticipantes()">Listar</button>
+    <div class="hide" id="listagemParticipantes">
+    <table>
+        <thead>
+            <tr>
+                <th>NIF</th>
+                <th>Nome</th>
+                <th>Morada</th>
+                <th>Idade</th>
+                <th>Telefone</th>
+                <th>Curso</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaParticipantes"></tbody>
+    </table>
+</div>
+<br><br>
+<select id="selecaoCurso">
+    <option value="html">HTML</option>
+    <option value="java">Java</option>
+    <option value="csharp">C#</option>
+    <option value="php">PHP</option>
+</select><br><br>
+<button type="button" onclick="listarCurso()">Listar Cursos</button>
+<div class="hide" id="listagemParticipantesCursos">
+    <table>
+        <thead>
+            <tr>
+                <th>NIF</th>
+                <th>Nome</th>
+                <th>Morada</th>
+                <th>Idade</th>
+                <th>Telefone</th>
+                <th>Curso</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaParticipantesCursos"></tbody>
+    </table>
+</div>
+</body>
+</html>

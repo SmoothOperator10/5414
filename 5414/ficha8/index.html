@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <label>Nome:</label><br>
+    <input type="text" id="nomeCliente"><br>
+    <label>Email:</label><br>
+    <input type="email" id="emailCliente"><br>
+    <label>NIF:</label><br>
+    <input type="number" id="nifCliente"><br>
+    <label>Morada:</label><br>
+    <input type="text" id="moradaCliente"><br>
+    <button type="button" onclick="registaCliente()">Registar</button>
+    <br><br><br>
+    <label>Nome produto:</label><br>
+    <input type="text" id="nomeProduto"><br>
+    <label>Referência produto:</label><br>
+    <input type="text" id="refProduto"><br>
+    <label>Preço S/ IVA:</label><br>
+    <input type="number" id="precoProduto"><br>
+    <button type="button" onclick="registaProduto()">Registar</button>
+    <br><br><br>
+    <label id="ordemOrcamento">Orçamento nº: 0.</label><br>
+    <label>Escolha um cliente para fazer um orçamento:</label><br>
+    <select id="listagemClientes">
+        <option value="-1">Sem clientes registados</option>
+    </select><br>
+    <label>Escolha um produto para o orçamento:</label><br>
+    <select id="listagemProdutos">
+        <option value="-1">Sem produtos registados</option><br>
+    </select><br>
+    <label>Quantidade do Produto:</label><br>
+    <input type="number" id="quantidadeProduto"><br>
+    <button type="button" onclick="gerarOrcamento()">Orçamento</button>
+    <br><br>
+    <button type="button" onclick="listagemOrcamentos()">Listar orçamentos</button><br>
+    <table>
+        <thead>
+            <tr>
+                <th>Orçamento nº</th>
+                <th>NIF Cliente</th>
+                <th>Nome Cliente</th>
+                <th>Referência do Produto</th>
+                <th>Nome do Produto</th>
+                <th>Quantidade</th>
+                <th>Preço/Und s/ IVA</th>
+                <th>PVP Total</th>
+            </tr>
+        </thead>
+        <tbody id="tableOrcamentos">
+
+        </tbody>
+    </table>
+<br><br><br>
+<select id="filtroCliente">
+</select><br>
+<button type="button" onclick="listarFiltroPorCliente()">Listar Orçamentos por Cliente</button>
+<table>
+    <thead>
+        <tr>
+            <th>Orçamento nº</th>
+            <th>NIF Cliente</th>
+            <th>Nome Cliente</th>
+            <th>Referência do Produto</th>
+            <th>Nome do Produto</th>
+            <th>Quantidade</th>
+            <th>Preço/Und s/ IVA</th>
+            <th>PVP Total</th>
+        </tr>
+    </thead>
+    <tbody id="tableFiltradaOrcamentos">
+
+    </tbody>
+</table>
+<br><br><br>
+<select id="editaCliente" onchange="getDadosCliente(this.value)">
+</select><br>
+<label>Nome:</label><br>
+<input type="text" id="nomeClienteEdit"><br>
+<label>Email:</label><br>
+<input type="email" id="emailClienteEdit"><br>
+<label>NIF:</label><br>
+<input type="number" id="nifClienteEdit" readonly><br>
+<label>Morada:</label><br>
+<input type="text" id="moradaClienteEdit"><br>
+<button type="button" onclick="editarCliente()">Guardar Alterações</button>
+<br><br><br>
+
+<select id="editaProduto" onchange="getDadosProduto(this.value)">
+</select><br>
+<label>Nome produto:</label><br>
+<input type="text" id="nomeProdutoEdit" readonly><br>
+<label>Referência produto:</label><br>
+<input type="text" id="refProdutoEdit"readonly><br>
+<label>Preço S/ IVA:</label><br>
+<input type="number" id="precoProdutoEdit"><br>
+<button type="button" onclick="editarProduto()">Guardar Alterações</button>
+<br><br><br>
+</body>
+</html>
