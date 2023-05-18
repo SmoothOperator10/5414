@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body onload="listaTipo(), nRegisto()">
+    <h3>Registo Evento</h3>
+    <label>Nº de Registo</label><br>
+    <input type="number" id="nEvento" readonly><br>
+    <label>Local</label><br>
+    <input type="text" id="localEvento"><br>
+    <label>Latitude</label><br>
+    <input type="number" id="latEvento"><br>
+    <label>Longitude</label><br>
+    <input type="number" id="longEvento"><br>
+    <label>Horário</label><br>
+    <input type="number" id="horarioEvento"><br>
+    <label>Tipo</label><br>
+    <select id="tipoEvento">
+    </select>
+    <br>
+    <button type="button" onclick="registaEvento()">Registar Local</button>
+    <br>
+    <br>
+    <h3>Registo Banda</h3>
+    <label>Nome</label><br>
+    <input type="text" id="nomeBanda"><br>
+    <label>Código</label><br>
+    <input type="number" id="nBanda" readonly><br>
+    <label>Tipo</label><br>
+    <select id="tipoBanda">
+    </select>
+    <br>
+    <button type="button" onclick="registaBanda()">Registar Banda</button>
+    <br>
+    <br>
+    <h3>Registo Evento - Bandas</h3>
+    <label>Nº de Registo</label><br>
+    <select id="nRegisto2" onchange="listaRegistarEvento(this.value)">
+        <option value='-1'>Sem locais registados</option>
+    </select><br>
+    <label>Local</label><br>
+    <input type="text" id="localRegistoEv"><br>
+    <label>Tipo do Local</label><br>
+    <input type="text" id="tipoEv"><br>
+    <label>Código</label><br>
+    <select id="codBand" onchange="listaBandasEvento(this.value)">
+        <option value="-1">Sem bandas registadas</option>
+    </select><br>
+    <label>Nome</label><br>
+    <input type="text" id="nomeBandaEv"><br>
+    <label>Tipo da Banda</label><br>
+    <input type="text" id="tipoBandaEv"><br>
+    <button type="button" onclick="registaEventoBanda()">Registar Evento</button>
+    <br>
+    <br>
+    <h3>Registo Evento - Público</h3>
+    <label>Nº de Registo</label><br>
+    <select id="nRegisto3" onchange="registaPublico(this.value)">
+        <option value='-1'>Sem locais registados</option>
+    </select><br>
+    <label>Local</label><br>
+    <input type="text" id="localRegistoEvPub"><br>
+    <label>Nome</label><br>
+    <input type="text" id="nomePub"><br>
+    <label>NIF</label><br>
+    <input type="number" id="nifPub"><br>
+    <label>Telefone</label><br>
+    <input type="tel" id="telPub"><br>
+    <label>Email</label><br>
+    <input type="email" id="emailPub"><br>
+    <button type="button" onclick="registaEventoPublico()">Registar Evento Público</button><br>
+    <h3>Listagem de Bandas em Eventos</h3>
+    <select id="listaBandas" onchange="filtrarBandas(this.value)">
+        <option value="-1">Sem bandas registados</option>
+    </select>
+    <table>
+        <thead>
+            <tr>
+                <th>Evento</th>
+                <th>Local do Evento</th>
+                <th>Nome da Banda</th>
+                <th>Código da Banda</th>
+                <th>Tipo da Banda</th>
+                </tr>
+        </thead>
+        <tbody id="listaBandasNoEvento">
+
+        </tbody>
+    </table>
+
+    <h3>Listagem de Público em Eventos</h3>
+    <select id="listaPublico" onchange="filtrarPublico(this.value)">
+        <option value="-1">Sem público registados</option>
+    </select>
+    <table>
+        <thead>
+            <tr>
+                <th>Evento</th>
+                <th>Local do Evento</th>
+                <th>Nome da Pessoa</th>
+                <th>NIF da Pessoa</th>
+                <th>Botão</th>
+                </tr>
+        </thead>
+        <tbody id="listaPublicoNoEvento">
+
+        </tbody>
+    </table>
+    <p id="infoPessoa"></p>
+</body>
+</html>

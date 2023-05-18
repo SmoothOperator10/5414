@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <h3>Registo Área</h3>
+    <label>Referência</label><br>
+    <input type="text" id="refArea"><br>
+    <label>Descrição</label><br>
+    <input type="text" id="descricaoArea"><br>
+    <button type="button" onclick="registaArea()">Regista a Área</button>
+
+    <br><br><br>
+
+    <h3>Registo Especie</h3>
+    <label>Descrição</label><br>
+    <input type="text" id="descricaoEspecie"><br>
+    <button type="button" onclick="registaEspecie()">Regista a Especie</button>
+    
+    <br><br><br>
+
+    <h3>Registo Animal</h3>
+    <label>Área</label><br>
+    <select id="areaAnimal">
+        <option value="-1">Sem áreas registadas</option>
+    </select><br>
+    <label>Nome</label><br>
+    <input type="text" id="nomeAnimal"><br>
+    <label>Número do Chip</label><br>
+    <input type="number" id="chipAnimal"><br>
+    <label>Data de Nascimento</label><br>
+    <input type="date" id="dataAnimal"><br>
+    <label>Especie</label><br>
+    <select id="especieAnimal">
+        <option value="-1">Sem especies registadas</option>
+    </select><br>
+    <button type="button" onclick="registaAnimal()">Regista a Animal</button>
+
+    <br><br><br>
+
+    <h3>Registo Visitante</h3>
+    <label>Nome</label><br>
+    <input type="text" id="nomeVisitante"><br>
+    <label>Email</label><br>
+    <input type="email" id="emailVisitante"><br>
+    <label>CC</label><br>
+    <input type="text" id="ccVisitante"><br>
+    <button type="button" onclick="registaVisitante()">Regista o Visitante</button>
+    
+    <br><br><br>
+    
+    <h3>Registo Visitante na Área</h3>
+    <label>Nome</label><br>
+    <select id="nomeVisitanteArea" onchange="getAreas()">
+        <option value="-1"> Sem visitantes Registados</option>
+    </select>
+    <table>
+        <thead>
+            <tr>
+                <th>Descrição</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="listaVisitanteArea">
+
+        </tbody>
+    </table>
+    <button type="button" onclick="registaVisitanteArea()">Regista na Área</button>
+    
+    <br><br><br>
+    
+    <h3>Listagem Visitante na Área</h3>
+    <label>Nome</label><br>
+    <select id="nomeListagemVisitanteArea" onchange="getVisitante(this.value)">
+        <option value="-1"> Sem visitantes Registados</option>
+    </select>
+    <table>
+        <thead>
+            <tr>
+                <td>Área</td>
+                <td>Animais</td>
+            </tr>
+        </thead>
+        <tbody id="listagemVisitanteArea"></tbody>
+    </table>
+    <p id="infoAnimais"></p>
+</body>
+</html>
