@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+   <h3>Registo Proprietários</h3>
+   <label>NIF</label><br>
+   <input type="number" id="nifProprietario"><br>
+   <label>Nome</label><br>
+   <input type="text" id="nomeProprietario"><br>
+   <label>Morada</label><br>
+   <input type="text" id="moradaProprietario"><br>
+   <button type="button" onclick="registaProprietario()">Regista Proprietário</button>
+
+   <br><br><br>
+
+   <h3>Registo Peças</h3>
+   <label>Referência</label><br>
+   <input type="number" id="refPecas"><br>
+   <label>Descrição</label><br>
+   <input type="text" id="DescPecas"><br>
+   <button type="button" onclick="registaPecas()">Regista Peça</button>
+
+   <br><br><br>
+
+   <h3>Registo Marcas</h3>
+   <label>Nome</label><br>
+   <input type="text" id="nomeMarca"><br>
+   <button type="button" onclick="registaMarca()">Regista Marca</button>
+
+   <br><br><br>
+
+   <h3>Registo Modelo</h3>
+   <label>Marca</label><br>
+<select id="listaMarcas">
+</select><br>
+   <label>Nome</label><br>
+   <input type="text" id="nomeModelo"><br>
+   <button type="button" onclick="registaModelo(this.value)">Regista Modelo</button>
+
+   <br><br><br>
+
+   <h3>Registo Veículo</h3>
+   <label>Proprietários</label><br>
+   <select id="listaProprietarios">
+      <option value="-1">Sem proprietários registados</option>
+   </select><br>
+   <label>Matrícula</label><br>
+   <input type="text" id="matriculaVeiculo"><br>
+   <label>Marca</label><br>
+<select id="listaMarcas2" onchange="getModelos(this.value)">
+</select><br>
+<label>Modelo</label><br>
+<select id="listaModelos">
+   <option value="-1">Escolha primeiro a marca</option>
+</select><br>
+   <button type="button" onclick="registaVeiculo(this.value)">Regista Veículo</button>
+
+   <br><br><br>
+
+   <h3>Registo Interveção</h3>
+   <label>Veículo</label><br>
+   <select id="listaVeiculos" onchange="getPecas()">
+      <option value="-1">Sem veículos registados</option>
+   </select><br>
+   <label>Peças</label><br>
+ <table>
+   <thead>
+      <tr>
+         <th>Descrição</th>
+         <th>Utilizada</th>
+      </tr>
+   </thead>
+   <tbody id="listaPecas">
+   
+   </tbody>
+ </table>  
+   <button type="button" onclick="registaIntervencao()">Regista Interveção</button>
+
+   <br><br><br>
+
+   <h3>Listagem Interveções</h3>
+   <label>Veículo</label><br>
+   <select id="listaVeiculos2" onchange="getIntervencoes(this.value)">
+      <option value="-1">Sem veículos registados</option>
+   </select><br>
+   <table>
+      <thead>
+         <tr>
+            <th>Intervenções</th>
+            <th>Peças</th>
+         </tr>
+      </thead>
+      <tbody id="listagemIntervencoes">
+      </tbody>
+
+   </table>
+   <p id="pecasUtilizadas"></p>
+</body>
+</html>

@@ -144,9 +144,8 @@ function getVisitante(n){
 
     let msg ="";
     for(let i = 0; i < visitasArea.length; i++){
-
-        for (let j=0; j < visitasArea[i][1].length; j++){
         if(n == visitasArea[i][0]){
+        for (let j=0; j < visitasArea[i][1].length; j++){
             msg += "<tr>";
             msg += "<td>"+areas[visitasArea[i][1][j]][1]+"</td>";
             msg += "<td><button type='button' onclick='mostraAnimais(" +visitasArea[i][1][j]+ ")'>Mostra os Animais da Área</button></td>";
@@ -179,7 +178,7 @@ function mostraAnimais(area){
                 msg += "<td>"+animais[i][1]+"</td>";
                 msg += "<td>"+animais[i][2]+"</td>";
                 msg += "<td>"+animais[i][3]+"</td>";
-                msg += "<td>"+especies[animais[i][4]][0]+"</td>";
+                msg += "<td>"+especies[animais[i][4]]+"</td>";
                 msg += "</tr>";
                 console.log(animais[i][0])
     }

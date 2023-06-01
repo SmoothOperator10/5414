@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+   <h3>Regista Pontos de Interesse</h3>
+   <label>Nome</label><br>
+   <input type="text" id="nomePonto"><br>
+   <label>Descrição</label><br>
+   <input type="text" id="descricaoPonto"><br>
+   <label>Latitude</label><br>
+   <input type="number" id="latPonto"><br>
+   <label>Longitude</label><br>
+   <input type="number" id="longPonto"><br>
+   <button type="button" onclick="registaPonto()">Regista Ponto de Interesse</button><br>
+
+   <br><br><br>
+
+   <h3>Regista Turista</h3>
+   <label>Nome</label><br>
+   <input type="text" id="nomeTurista"><br>
+   <label>NIF</label><br>
+   <input type="number" id="nifTurista"><br>
+   <label>Email</label><br>
+   <input type="email" id="emailTurista"><br>
+   <label>Telefone</label><br>
+   <input type="tel" id="telefoneTurista"><br>
+   <button type="button" onclick="registaTurista()">Regista Turista</button>
+
+   <br><br><br>
+
+   <h3>Regista Percurso</h3>
+   <label>Escolha o turista</label><br>
+   <select id="listaTuristas" onchange="getPontos()">
+   <option value="-1">Sem turistas registados</option>
+   </select><br>
+   <label>Nome</label><br>
+   <input type="text" id="nomePercurso"><br>
+   <label>Escolha os Pontos</label><br>
+ <table>
+<thead>
+   <tr>
+      <th>Ponto de Interesse</th>
+      <th>Visita</th>
+      <th>Comentários</th>
+   </tr>
+</thead>
+<tbody id="checkPontos">
+
+</tbody>
+ </table><br>
+ <button type="button" onclick="registarPercurso()">Regista Percurso</button><br>
+
+ <br><br><br>
+
+ <h3>Listagem Percursos</h3>
+ <label>Escolha o turista</label><br>
+ <select id="listaTuristas2" onchange="listagemTuristas(this.value)">
+ <option value="-1">Sem turistas registados</option>
+ </select><br>
+ <table>
+   <thead>
+      <tr>
+         <th>Percurso</th>
+         <th>Info Ponto</th>
+      </tr>
+   </thead>
+   <tbody id="listaPercursosTuristas">
+   </tbody>
+ </table>
+</body>
+<p id="listaPontosDetalhe"></p>
+</html>
